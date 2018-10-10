@@ -11,6 +11,7 @@ const app = express();
 
 const static = express.static;
 app.use(static('./public/'));
+pp.use(static('./uploads/'));
 
 app.post('/picture', upload.single('imagefile'), function (req, res, next) {
   // req.file is the `avatar` file
